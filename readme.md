@@ -261,7 +261,7 @@ Además de `send()`, el servicio ofrece envío sin bloquear y por lotes, con `Co
 
 ### `sendAsync` — un envío, sin bloquear
 
-![img_1.png](img_1.png)
+![sendAsync.png](sendAsync.png)
 
 ```java
 CompletableFuture<NotificationResult> futuro = service.sendAsync(notification);
@@ -277,7 +277,7 @@ futuro.thenAccept(result -> {
 
 ### `sendBatch` — varios envíos en paralelo
 
-![img.png](img.png)
+![sendBatch.png](sendBatch.png)
 
 Admite **canales mezclados** en el mismo lote:
 
@@ -322,7 +322,7 @@ NotificationService service = NotificationService.builder()
 
 ## Reintentos
 
-![img_3.png](img_3.png)
+![Retry.png](Retry.png)
 
 `RetryingSender` es un **decorator**: envuelve cualquier sender y reintenta ante `Failure`,
 con **backoff exponencial**. No se "activa" en ningún sitio de la librería — **se compone al
@@ -517,7 +517,7 @@ Incluye checklist y los errores típicos que conviene evitar.
 
 ### `sealed` + `records` para el modelo
 
-![img_5.png](img_5.png)
+![Modelo.png](Modelo.png)
 
 El criterio: **¿el conjunto de variantes es cerrado y propiedad mía, o abierto a terceros?**
 
@@ -543,7 +543,7 @@ campo `type` y campos anulables (permitiría un email con teléfono y sin asunto
 
 ### Strategy para los proveedores
 
-![img_4.png](img_4.png)
+![strategy.png](strategy.png)
 
 `NotificationSender<T>` con `send(T)` y `supports()`. La clave es que `supports()` devuelve
 `Class<T>`: el servicio indexa los senders en un `Map<Class<?>, NotificationSender<?>>` y
@@ -614,9 +614,7 @@ Estas decisiones se apartan de la letra del enunciado. Las declaro explícitamen
 Este proyecto se desarrolló usando IA como **copiloto**, de forma explícita y documentada.
 
 **Yo diseñé la solución** y la fui **iterando** hasta cumplir con el plazo establecido. La IA
-no sustituyó las decisiones de arquitectura: cada decisión de este documento —sellar el
-modelo, dejar los proveedores abiertos, devolver `Failure` en vez de lanzar, componer los
-reintentos como decorator— se tomó, se discutió y se validó antes de escribir código.
+no sustituyó las decisiones de arquitectura: cada decisión de este documento se tomó, se discutió y se validó antes de escribir código.
 
 **Dónde me apoyé concretamente:**
 
@@ -632,6 +630,9 @@ reintentos como decorator— se tomó, se discutió y se validó antes de escrib
 **Cómo se usó**: como interlocutor para contrastar decisiones y como acelerador en las partes
 mecánicas (documentación y pruebas), revisando y ajustando todo lo generado. El resultado es
 código que entiendo y puedo defender línea por línea.
+
+Gracias al uso de la IA pude cumplir con el reto dentro del tiempo determinado,
+caso contrario hubiera necesitado mas tiempo para hacerlo.
 
 ---
 

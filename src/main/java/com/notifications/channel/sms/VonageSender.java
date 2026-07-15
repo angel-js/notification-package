@@ -1,6 +1,7 @@
 package com.notifications.channel.sms;
 
 import com.notifications.config.sms.MovistarConfig;
+import com.notifications.config.sms.VonageConfig;
 import com.notifications.core.NotificationSender;
 import com.notifications.model.Failure;
 import com.notifications.model.NotificationResult;
@@ -12,18 +13,18 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.UUID;
 
 @Slf4j
-public class MovistarSender implements NotificationSender<SmsNotification> {
+public class VonageSender implements NotificationSender<SmsNotification> {
 
-    private final MovistarConfig config;
+    private final VonageConfig config;
 
-    public MovistarSender(MovistarConfig config) {
+    public VonageSender(VonageConfig config) {
         this.config = config;
     }
 
     @Override
     public NotificationResult send(SmsNotification notification) {
         try {
-            log.info("[Movistar] POST /v1/sms/send accountSid={}, authToken={}, " +
+            log.info("[Vonage] POST /v1/sms/send accountSid={}, authToken={}, " +
                             "fromNumber={}, to={}, message={}",
                     MaskSecrets.mask(config.accountSid()),
                     MaskSecrets.mask(config.authToken()),
@@ -32,7 +33,7 @@ public class MovistarSender implements NotificationSender<SmsNotification> {
 
             return Success.of("transactionId_" + UUID.randomUUID());
         } catch (RuntimeException e) {
-            return new Failure("MOVISTAR_ERROR", "Fallo al enviar vía Movistar SMS", e);
+            return new Failure("VONAGE_ERROR", "Fallo al enviar vía VONAGE SMS", e);
         }
     }
 

@@ -1,0 +1,9 @@
+# El build se hace dentro del contenedor: no copiamos artefactos locales
+target/
+.git/
+.gitignore
+.idea/
+*.iml
+
+# Documentación: no afecta a la compilación
+*.md

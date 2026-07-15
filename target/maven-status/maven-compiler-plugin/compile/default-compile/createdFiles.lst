@@ -2,12 +2,15 @@ com/notifications/retry/RetryingSender.class
 com/notifications/config/sms/TwilioConfig$TwilioConfigBuilder.class
 com/notifications/model/Notification.class
 com/notifications/config/push/IOSConfig.class
+com/notifications/examples/NotificationExamples$SenderInestable.class
 com/notifications/model/NotificationResult.class
 com/notifications/model/Success.class
 com/notifications/model/EmailNotification.class
 com/notifications/config/email/MailGunConfig.class
 com/notifications/config/push/AndroidConfig.class
+com/notifications/async/AsyncDispatcher.class
 com/notifications/core/NotificationService.class
+com/notifications/channel/sms/VonageSender.class
 com/notifications/config/sms/MovistarConfig$MovistarConfigBuilder.class
 com/notifications/channel/sms/MovistarSender.class
 com/notifications/model/PushNotification.class
@@ -15,12 +18,14 @@ com/notifications/model/Failure.class
 com/notifications/exception/InvalidNotificationException.class
 com/notifications/channel/push/IOSSender.class
 com/notifications/exception/NotificationException.class
+com/notifications/config/sms/VonageConfig.class
 com/notifications/channel/email/MailgunSender.class
 com/notifications/core/NotificationService$Builder.class
 com/notifications/config/email/SendGridConfig.class
 com/notifications/config/email/MailGunConfig$MailGunConfigBuilder.class
 com/notifications/utils/Validations.class
 com/notifications/core/strategy/SenderRegistry.class
+com/notifications/config/sms/VonageConfig$VonageConfigBuilder.class
 com/notifications/channel/sms/TwilioSender.class
 com/notifications/core/NotificationSender.class
 com/notifications/config/push/IOSConfig$IOSConfigBuilder.class
@@ -30,5 +35,6 @@ com/notifications/channel/push/AndroidSender.class
 com/notifications/channel/email/SendGridSender.class
 com/notifications/config/sms/TwilioConfig.class
 com/notifications/model/SmsNotification.class
+com/notifications/examples/NotificationExamples.class
 com/notifications/utils/MaskSecrets.class
 com/notifications/config/sms/MovistarConfig.class

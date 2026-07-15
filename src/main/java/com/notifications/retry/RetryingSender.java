@@ -4,10 +4,12 @@ import com.notifications.core.NotificationSender;
 import com.notifications.model.Notification;
 import com.notifications.model.NotificationResult;
 import com.notifications.model.Success;
+import lombok.extern.slf4j.Slf4j;
 
 import java.time.Duration;
 import java.util.Objects;
 
+@Slf4j
 public class RetryingSender<T extends Notification> implements NotificationSender<T> {
 
     private final NotificationSender<T> delegate;
@@ -26,14 +28,15 @@ public class RetryingSender<T extends Notification> implements NotificationSende
 
     @Override
     public NotificationResult send(T notification) {
-        NotificationResult resultado = delegate.send(notification); // attempt 1
+        NotificationResult resultado = delegate.send(notification); // intento n° 1
         if (resultado instanceof Success) {
             return resultado;
         }
         Duration espera = initialBackoff;
-        for (int intento = 1; intento <= maxRetries; intento++) { // retry
+        for (int intento = 1; intento <= maxRetries; intento++) { // reitentos
+            log.warn("Envío fallido; reintento {} de {} en {} ms", intento, maxRetries, espera.toMillis());
             if (!dormir(espera)) return resultado;
-            espera = espera.multipliedBy(2);        // double for next time
+            espera = espera.multipliedBy(2);        // duplicar la espera
             resultado = delegate.send(notification);
             if (resultado instanceof Success) return resultado;
         }

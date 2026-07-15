@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.notifications.model.PushNotificationTest
 -------------------------------------------------------------------------------
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.notifications.model.PushNotificationTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in com.notifications.model.PushNotificationTest

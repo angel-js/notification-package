@@ -62,10 +62,6 @@ public final class SenderRegistry {
         // porque el mapa es privado, inmutable y solo se puebla en el constructor.
         // Como buscamos con notification.getClass(), el sender recuperado acepta
         // forzosamente ESTA notificación.
-        //
-        // El cast y el envío se mantienen juntos aquí a propósito: exponer un
-        // NotificationSender<Notification> hacia fuera mentiría sobre el tipo aceptado y
-        // permitiría un ClassCastException (p. ej. resolve(email).send(sms)).
         return ((NotificationSender<Notification>) sender).send(notification);
     }
 }

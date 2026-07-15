@@ -1,0 +1,11 @@
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/channel/SenderContractTest.java
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/config/ConfigMaskingTest.java
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/core/NotificationServiceTest.java
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/core/strategy/SenderRegistryTest.java
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/model/EmailNotificationTest.java
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/model/FailureTest.java
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/model/PushNotificationTest.java
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/model/SmsNotificationTest.java
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/model/SuccessTest.java
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/utils/MaskSecretsTest.java
+/Users/aserrano/IdeaProjects/notification-package/src/test/java/com/notifications/utils/ValidationsTest.java

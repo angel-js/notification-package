@@ -11,6 +11,8 @@
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/config/sms/MovistarConfig.java
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/config/sms/TwilioConfig.java
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/core/NotificationSender.java
+/Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/core/NotificationService.java
+/Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/core/strategy/SenderRegistry.java
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/exception/InvalidNotificationException.java
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/exception/NoSenderRegisteredException.java
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/exception/NotificationException.java
@@ -21,5 +23,6 @@
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/model/PushNotification.java
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/model/SmsNotification.java
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/model/Success.java
+/Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/retry/RetryingSender.java
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/utils/MaskSecrets.java
 /Users/aserrano/IdeaProjects/notification-package/src/main/java/com/notifications/utils/Validations.java
